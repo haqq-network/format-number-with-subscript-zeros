@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "module": "commonjs",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "outDir": "./dist"
+    },
+    "include": ["src/**/*.ts", "tests/**/*.ts"],
+    "exclude": ["node_modules", "**/__tests__/*"],
+    "typedocOptions": {
+      "plugin": "typedoc-plugin-markdown",
+      "entryPoints": [
+        "src/index.ts"
+      ],
+      "out": "docs",
+      "includeVersion": true,
+      "exclude": [
+        "**/*+(index|.spec|.test|.e2e).ts",
+        "**/*+(__mocks__)/**",
+        "**/__tests__/**",
+        "**/swagger/**",
+        "**/index.*.ts",
+        "*.json"
+      ]
+    }
+  }
