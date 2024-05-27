@@ -60,6 +60,9 @@ describe('formatNumberWithSubscriptZeros', () => {
         it('should format numbers with different precision', () => {
             expect(formatNumberWithSubscriptZeros("0.00000123456", 4)).toBe("0.0₅1234");
             expect(formatNumberWithSubscriptZeros("0.0000042", 1)).toBe("0.0₅4");
+            expect(formatNumberWithSubscriptZeros("0.00000402", 2)).toBe("0.0₅40");
+            expect(formatNumberWithSubscriptZeros("0.000004022", 3)).toBe("0.0₅402");
+            expect(formatNumberWithSubscriptZeros("0.000004020", 3)).toBe("0.0₅402");
         });
 
         it('should format numbers with different minimum values', () => {
