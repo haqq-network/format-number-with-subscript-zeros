@@ -1,6 +1,6 @@
 {
   "name": "@haqq/format-number-with-subscript-zeros",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A library to format numbers using scientific notation with subscript zeros. This method is particularly useful for representing very small numbers in a compact and readable format.",
   "main": "dist/index.js",
   "scripts": {

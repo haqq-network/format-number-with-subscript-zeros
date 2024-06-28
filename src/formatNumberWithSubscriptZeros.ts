@@ -11,7 +11,7 @@ export function formatNumberWithSubscriptZeros(numberStr: string, presiction = 3
     if (number >= min) {
         const [part0, part1] = numberStr.split('.')
         if(part1) {
-            const leadingZeros = part1?.match?.(/0+/)?.[0] || '';
+            const leadingZeros = part1?.match?.(/^0+/)?.[0] || '';
             return `${part0}.${leadingZeros}${part1.replace(leadingZeros, '').slice(0, presiction)}`
         }
         return part1 ? [part0, part1.slice(0, presiction)].join('.') : part0;
